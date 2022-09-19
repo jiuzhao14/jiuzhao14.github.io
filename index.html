@@ -167,6 +167,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://jiuzhao14.top/2022/09/18/%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/picture/avatar.png">
+      <meta itemprop="name" content="Weibiao Tian">
+      <meta itemprop="description" content="哲人的智慧，加上孩子的天真，或者就能成个好作家了。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="九辩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/18/%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">网络</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-18 21:48:52" itemprop="dateCreated datePublished" datetime="2022-09-18T21:48:52+08:00">2022-09-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-19 10:44:02" itemprop="dateModified" datetime="2022-09-19T10:44:02+08:00">2022-09-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">网络</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="BGP路由黑洞解决方案"><a href="#BGP路由黑洞解决方案" class="headerlink" title="BGP路由黑洞解决方案"></a>BGP路由黑洞解决方案</h4><p>BGP路由黑洞产生的原因及解决方案</p>
+<p>两台非直连路由器可以建立BGP邻居关系，传递BGP路由。如果中间路由器没有运行BGP协议，可能会出现路由黑洞。</p>
+<p><img src="/picture/2022-09-19103437.png" alt="bgp"></p>
+<p>在拓扑图中，R1和R2是EBGP邻居关系，R2和R4是IBGP邻居关系，R4和R5是EBGP邻居关系，R3没有运行BGP。</p>
+<p>BGP路由黑洞介绍：</p>
+<p>R1将网络10.0.0.0&#x2F;24宣告到BGP进程，传递给R2。R2传递给R4，R4传递给R5。在R5上访问10.0.0.1时：R5给R4，R4给R3，R3上没有学习到10.0.0.0&#x2F;24的路由，由于目的地址不可达丢弃数据包。这种现象称为路由黑洞。</p>
+<p>1&gt; R2上将BGP路由引入到IGP协议中，让R3通过IGP学习到10.0.0.0&#x2F;24的路由。这种解决方案缺点比较明显，如果BGP路由数量比较多时，IGP协议可能承载不了这么多路由。</p>
+<p>2&gt; IBGP邻居全联接，让R2 R3 R4两两之间建立IBGP邻居关系，让R2把BGP路由同时也传递给R3。这种解决方案的缺点是AS中如果路由器数量比较多时，路由器上IBGP邻居关系的数量也会很多。</p>
+<p>3&gt; 在AS200中运行MPLS。</p>
+<p>4&gt; 在AS200中配置路由反射器。可以减少IBGP邻居全联接造成的IBGP邻居关系数量过多的情况。</p>
+<p>5&gt; 在AS200中配置BGP联盟。可以减少IBGP邻居全联接造成的IBGP邻居关系数量过多的情况。</p>
+<p>BGP的同步规则不是路由黑洞的解决方法，却可以避免BGP路由黑洞。</p>
+<p>BGP同步规则开启后，从IBGP收到一条路由后，在IBGP路由加入路由表并发布给EBGP邻居之前，会先检查IGP路由表。只有在IGP也知道这条IBGP路由时，它才会被加入到路由表，并发布给EBGP邻居。</p>
+<p>在R4开启BGP同步规则，当R4从IBGP邻居R2收到10.0.0.0&#x2F;24的路由后，因为没有从IGP学到这条路由，所以不会把它加入到路由表，不会发送给R5。也就避免了BGP路由黑洞</p>
+<p>转载自</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://jiuzhao14.top/2022/09/17/%E5%8F%B2%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -360,76 +448,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://jiuzhao14.top/2022/09/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/picture/avatar.png">
-      <meta itemprop="name" content="Weibiao Tian">
-      <meta itemprop="description" content="哲人的智慧，加上孩子的天真，或者就能成个好作家了。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="九辩">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/09/13/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-09-13 17:34:06" itemprop="dateCreated datePublished" datetime="2022-09-13T17:34:06+08:00">2022-09-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
 
@@ -505,13 +523,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
