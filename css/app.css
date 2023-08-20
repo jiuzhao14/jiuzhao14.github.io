@@ -1586,7 +1586,7 @@ body {
 body {
   background: linear-gradient(to top, var(--body-bg-shadow) 0, var(--grey-1) 20%) no-repeat bottom;
   color: var(--text-color);
-  font-family: 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
   line-height: 2;
   -webkit-font-smoothing: antialiased;
@@ -1617,7 +1617,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Mulish', 'Noto Serif SC', 'Noto Serif JP', 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 1.25rem 0 0.9375rem;
@@ -1628,7 +1628,7 @@ h3.title,
 h4.title,
 h5.title,
 h6.title {
-  font-family: 'Mulish', 'Noto Serif JP', 'Noto Serif SC', 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 a {
   border: none;
@@ -1708,8 +1708,8 @@ textarea {
 @font-face {
   font-family: 'ic';
   font-display: swap;
-  src: url("//at.alicdn.com/t/font_1832207_igi8uaupcus.eot");
-  src: url("//at.alicdn.com/t/font_1832207_igi8uaupcus.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_1832207_igi8uaupcus.woff2") format('woff2'), url("//at.alicdn.com/t/font_1832207_igi8uaupcus.woff") format('woff'), url("//at.alicdn.com/t/font_1832207_igi8uaupcus.ttf") format('truetype'), url("//at.alicdn.com/t/font_1832207_igi8uaupcus.svg#ic") format('svg');
+  src: url("//at.alicdn.com/t/font_.eot");
+  src: url("//at.alicdn.com/t/font_.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_.woff2") format('woff2'), url("//at.alicdn.com/t/font_.woff") format('woff'), url("//at.alicdn.com/t/font_.ttf") format('truetype'), url("//at.alicdn.com/t/font_.svg#ic") format('svg');
 }
 @font-face {
   font-family: 'jetbrains-mono';
@@ -1878,7 +1878,7 @@ textarea {
   position: relative;
   border-radius: 0.3125rem;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .pagination .prev,
   .pagination .next,
   .pagination .page-number,
@@ -1893,7 +1893,7 @@ textarea {
   display: inline-block;
   color: var(--grey-5);
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .pagination {
     padding: 1.25rem 0.625rem;
   }
@@ -2055,7 +2055,7 @@ main >.inner {
     padding: 0.625rem;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   #main .wrap {
     padding: 0.5rem;
   }
@@ -2320,7 +2320,7 @@ main >.inner {
   letter-spacing: 0.0625rem;
   text-align: center;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   #nav .menu .item {
     display: none;
   }
@@ -2428,12 +2428,12 @@ main >.inner {
   align-items: center;
 }
 #brand .artboard {
-  font-family: 'Fredericka the Great', 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 3.5em;
   line-height: 1.2;
 }
 #brand h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: 0.125rem;
 }
 #brand .artboard + h1 {
@@ -2453,12 +2453,12 @@ main >.inner {
 #brand .meta .item+.item {
   margin-left: 0.625rem;
 }
-@media (min-width: 820px) and (max-width: 1043px) {
+@media (min-width: ) and (max-width: 1043px) {
   #brand .meta {
     font-size: 0.8125em;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   #brand {
     padding: 3rem 0.5rem 0;
   }
@@ -2474,7 +2474,7 @@ main >.inner {
 }
 @media (max-width: 413px) {
   #brand .artboard {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 #tool {
@@ -2537,7 +2537,7 @@ main >.inner {
   z-index: 9;
   max-width: 25rem;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   #tool .player-info {
     right: 2.5rem;
   }
@@ -2626,7 +2626,7 @@ main >.inner {
   content-visibility: auto;
   contain-intrinsic-size: 100vw 15vh;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .waves {
     height: 10vh;
     contain-intrinsic-size: 100vw 10vh;
@@ -2936,17 +2936,11 @@ use.stop-animation {
   top: -10%;
   left: -10%;
 }
-.social .item.g::before {
-  background-color: thu;
+.social .item.::before {
+  background-color: ;
 }
-.social .item.g i {
-  color: thu;
-}
-.social .item.h::before {
-  background-color: #191717;
-}
-.social .item.h i {
-  color: #191717;
+.social .item. i {
+  color: ;
 }
 .social .item:focus i,
 .social .item:hover i {
@@ -3191,7 +3185,7 @@ use.stop-animation {
   width: 100%;
 }
 .with-love {
-  color: #ffc0cb;
+  color: #ff0000;
   display: inline-block;
   margin: 0 0.3125rem 0 0.125rem;
 }
@@ -3241,7 +3235,7 @@ use.stop-animation {
   padding: 0 2rem;
 }
 .md {
-  font-family: 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -3310,7 +3304,7 @@ use.stop-animation {
 .post header .meta {
   text-align: center;
   border-top: 0.0625rem dashed var(--grey-9-a1);
-  font-family: 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .post .meta {
   color: var(--grey-5);
@@ -3354,7 +3348,7 @@ use.stop-animation {
   display: flex;
   margin-bottom: 1rem;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .post-nav {
     flex-direction: column;
   }
@@ -3362,7 +3356,7 @@ use.stop-animation {
 .post-nav .item {
   width: 50%;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .post-nav .item {
     width: 100%;
   }
@@ -3613,7 +3607,7 @@ use.stop-animation {
 .article .md .anchor::before,
 .article .md .anchor::after {
   content: "H";
-  font-family: 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   left: -1.875rem;
   top: 1rem;
   width: 1.25rem;
@@ -3807,7 +3801,7 @@ use.stop-animation {
 .segments > .item.show {
   opacity: 1;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .cards .item,
   .segments > .item {
     width: calc(100% - 1rem) !important;
@@ -3943,7 +3937,7 @@ use.stop-animation {
   padding: 1rem 1.5rem 4rem;
   justify-content: space-between;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .cards .item .info {
     padding: 1rem 1rem 4rem;
   }
@@ -3953,7 +3947,7 @@ use.stop-animation {
   margin-bottom: 0.8rem;
   max-width: calc(100% + 2rem);
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .cards .item .info .ribbon {
     left: -2rem;
   }
@@ -4004,7 +3998,7 @@ use.stop-animation {
   box-shadow: 0 0.625rem 1.875rem -0.9375rem var(--box-bg-shadow);
   transition: all 0.2s ease-in-out 0s;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments > .item {
     flex-direction: column;
     height: fit-content;
@@ -4024,7 +4018,7 @@ use.stop-animation {
   border-radius: 0.625rem 0 0 0.625rem;
   overflow: hidden;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments .cover {
     width: 100%;
     height: 14rem;
@@ -4045,7 +4039,7 @@ use.stop-animation {
   padding: 1rem 1.5rem 3rem 0;
   perspective: 62.5rem;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments .info {
     width: 100%;
     height: 14rem;
@@ -4057,7 +4051,7 @@ use.stop-animation {
   justify-content: flex-end;
   margin: 0;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments .info .meta .item:not(:first-child) {
     display: none;
   }
@@ -4081,7 +4075,7 @@ use.stop-animation {
 .segments > .item:nth-child(even) {
   flex-direction: row-reverse;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments > .item:nth-child(even) {
     flex-direction: column;
   }
@@ -4092,7 +4086,7 @@ use.stop-animation {
   clip-path: polygon(0 0%, 100% 0%, 100% 100%, 8% 100%);
   border-radius: 0 0.625rem 0.625rem 0;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments > .item:nth-child(even) .cover {
     width: 100%;
     margin: auto;
@@ -4103,7 +4097,7 @@ use.stop-animation {
 .segments > .item:nth-child(even) .info {
   padding: 1rem 0 3rem 1.5rem;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .segments > .item:nth-child(even) .info {
     padding: 0 1rem 3rem;
   }
@@ -4284,6 +4278,7 @@ use.stop-animation {
 }
 #loading {
   background-color: var(--grey-1);
+  display: none;
 }
 .cat {
   position: relative;
@@ -4777,7 +4772,7 @@ use.stop-animation {
   width: 43.75rem;
   text-shadow: none;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   #search >.inner {
     width: 100%;
   }
@@ -5034,7 +5029,7 @@ use.stop-animation {
   width: calc(50% - 2rem);
   padding: 1rem;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .widgets {
     flex-direction: column-reverse;
   }
@@ -5109,7 +5104,7 @@ use.stop-animation {
 pre,
 code,
 .code-container {
-  font-family: 'Inconsolata', consolas, Menlo, -apple-system, "PingFang SC", "Microsoft YaHei";
+  font-family: consolas, Menlo, -apple-system, "PingFang SC", "Microsoft YaHei";
   font-size: 1em;
 }
 :not(td)>pre {
@@ -5688,7 +5683,7 @@ code,
 }
 .links .item .title {
   margin: 0.5rem 0;
-  font-family: 'Mulish', 'Noto Serif JP', 'Noto Serif SC', 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', 'Lato', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   color: var(--bg-color);
   border: none;
@@ -5713,7 +5708,7 @@ code,
 .links .item:hover .title {
   color: var(--header-text-color);
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .links {
     font-size: 1em;
   }
@@ -5834,7 +5829,7 @@ span.label {
   border-radius: 0.3rem;
   border: 0.0625rem solid;
   padding: 0.2rem 0.3rem;
-  font-family: 'Inconsolata', consolas, Menlo, -apple-system, "PingFang SC", "Microsoft YaHei";
+  font-family: consolas, Menlo, -apple-system, "PingFang SC", "Microsoft YaHei";
   font-size: 1em;
   background: var(--note-bg, var(--grey-2));
   border-color: var(--note-border, var(--grey-4));
@@ -6117,7 +6112,7 @@ span.label {
   align-items: center;
   padding: 1.25rem 1.25rem 0;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .audio .preview {
     padding: 1.25rem 0.625rem 0;
     flex-direction: column;
@@ -6132,7 +6127,7 @@ span.label {
   overflow: hidden;
   width: 100%;
 }
-@media (max-width: 820px) {
+@media (max-width: ) {
   .audio .preview .info {
     margin-left: 0;
   }
