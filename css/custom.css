@@ -1,0 +1,10 @@
+/* 主色紫 + 强调绿 */
+:root {
+  --theme-color: #7c3aed;
+  --theme-sub-color: #10b981;
+  --link-color: #10b981;
+  --link-hover: #34d399;
+  --btn-bg: #7c3aed;
+  --btn-hover: #8b5cf6;
+  --toc-active: #7c3aed;
+}

@@ -1,0 +1,36 @@
+/* ===== Butterfly 紫绿主题色覆盖 ===== */
+:root {
+  /* 主色 */
+  --theme-color: #7c3aed;
+  --theme-sub-color: #10b981;
+
+  /* 链接 */
+  --a-color: #10b981;
+  --a-hover: #34d399;
+
+  /* 按钮 */
+  --btn-bg: #7c3aed;
+  --btn-hover: #8b5cf6;
+
+  /* 导航栏渐变 */
+  #nav {
+    background: linear-gradient(90deg, #7c3aed 0%, #10b981 100%);
+  }
+
+  /* 分类/标签 active 条 */
+  .card-info .site-card .card-info-title,
+  #aside_content .card-tag-cloud a:hover,
+  #aside_content .card-categories a:hover {
+    color: #7c3aed !important;
+  }
+
+  /* 滚动条 */
+  ::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+  }
+
+  /* 代码框标题栏 */
+  figure.highlight .caption {
+    background: #7c3aed;
+  }
+}
