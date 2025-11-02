@@ -1,2 +1,6 @@
+http://jiuzhao14.github.io/tags/index.html
+http://jiuzhao14.github.io/categories/index.html
+http://jiuzhao14.github.io/archives/index.html
+http://jiuzhao14.github.io/about/index.html
 http://jiuzhao14.github.io/2025/11/02/hello-world/
 http://jiuzhao14.github.io/
