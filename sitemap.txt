@@ -1,5 +1,4 @@
 http://jiuzhao14.github.io/2025/11/02/The-eBPF-Runtime-in-the-Linux-Kernel/
-http://jiuzhao14.github.io/2025/11/02/hello-world/
 http://jiuzhao14.github.io/tags/index.html
 http://jiuzhao14.github.io/categories/index.html
 http://jiuzhao14.github.io/archives/index.html
