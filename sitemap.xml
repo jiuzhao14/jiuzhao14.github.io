@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jiuzhao14.github.io/2025/11/02/The-eBPF-Runtime-in-the-Linux-Kernel/</loc>
+    
+    <lastmod>2025-11-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jiuzhao14.github.io/2025/11/02/hello-world/</loc>
+    
+    <lastmod>2025-11-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://jiuzhao14.github.io/tags/index.html</loc>
     
     <lastmod>2025-11-02</lastmod>
@@ -37,15 +55,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://jiuzhao14.github.io/2025/11/02/hello-world/</loc>
-    
-    <lastmod>2025-11-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>http://jiuzhao14.github.io/</loc>
@@ -54,6 +63,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>http://jiuzhao14.github.io/tags/eBPF/</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   
