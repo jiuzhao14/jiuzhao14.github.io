@@ -1,3 +1,4 @@
+http://jiuzhao14.github.io/2025/12/16/CEL-200-COMTECH/
 http://jiuzhao14.github.io/2025/12/08/C/
 http://jiuzhao14.github.io/movies/index.html
 http://jiuzhao14.github.io/2025/11/02/The-eBPF-Runtime-in-the-Linux-Kernel/
@@ -6,4 +7,5 @@ http://jiuzhao14.github.io/categories/index.html
 http://jiuzhao14.github.io/archives/index.html
 http://jiuzhao14.github.io/about/index.html
 http://jiuzhao14.github.io/
+http://jiuzhao14.github.io/tags/CEL200/
 http://jiuzhao14.github.io/tags/eBPF/
