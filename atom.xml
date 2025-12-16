@@ -6,7 +6,7 @@
   <link href="http://jiuzhao14.github.io/atom.xml" rel="self"/>
   
   <link href="http://jiuzhao14.github.io/"/>
-  <updated>2025-12-16T07:59:41.122Z</updated>
+  <updated>2025-12-16T07:59:56.941Z</updated>
   <id>http://jiuzhao14.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://jiuzhao14.github.io/2025/12/16/CEL-200-COMTECH/"/>
     <id>http://jiuzhao14.github.io/2025/12/16/CEL-200-COMTECH/</id>
     <published>2025-12-16T07:42:00.000Z</published>
-    <updated>2025-12-16T07:59:41.122Z</updated>
+    <updated>2025-12-16T07:59:56.941Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>SCPC</strong><br>在卫星通信中，SCPC（Single Channel Per Carrier，单路单载波）是一种经典的频分多址（FDMA）传输技术，其核心作用是为点对点通信提供高可靠性、低时延、专用带宽的卫星链路。</p><p><strong>基本原理</strong></p><ul><li>单个载波仅承载一路通信信号。</li><li>每队通信站点使用一对独立的上行/下行载波频率进行全双工通信</li><li>载波之间通过频率隔离，避免相互干扰</li></ul><p><strong>主要作用</strong></p><ol><li>实现高可靠、电信级通信</li><li>支持低时延通信</li><li>按需分配带宽（结合DAMA）</li></ol><ul><li>在SCPC/DAMA（Demand Assigned Multiple Access）系统中：<ul><li>无通信时关闭载波，节省卫星功率；</li><li>有通信需求时动态申请并开启载波。</li></ul></li><li>特别适合远端站数量多、单站流量小且突发性强的移动卫星系统。</li></ul><ol start="4"><li>简化调试解调器设计<ul><li>每个载波只处理单一信号，调制解调器结构简单，易于实现高阶调制（如QPSK、8PSK）和高效公放利用。</li></ul></li></ol><p><strong>与其他技术对比</strong></p><table><thead><tr><th><strong>技术</strong></th><th><strong>多址方式</strong></th><th><strong>使用场景</strong></th></tr></thead><tbody><tr><td>SCPC</td><td>FDMA（每载波一路）</td><td>点对点、高可靠、恒定速率业务</td></tr><tr><td>MCPC（多路单载波）</td><td>FDM+TDM（多路复用到一个载波）</td><td>广播、集中回传（如电视分发）</td></tr><tr><td>TDMA</td><td>时分多址</td><td>多用户共享、突发数据（如现代VSAT宽带网）</td></tr><tr><td>MF-TDMA</td><td>混合多址</td><td>宽带卫星互联网（如Starlink地面段）</td></tr></tbody></table>]]></content>
     
