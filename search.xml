@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Introduction to Probability for Data Science</title>
+      <link href="/2025/12/29/Introduction-to-Probability-for-Data-Science/"/>
+      <url>/2025/12/29/Introduction-to-Probability-for-Data-Science/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Introduction-to-Probability-for-Data-Science"><a href="#Introduction-to-Probability-for-Data-Science" class="headerlink" title="Introduction to Probability for Data Science"></a>Introduction to Probability for Data Science</h1><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Probabiliby is one of the most interesting subjects in electrical engineering and computer science. It bridges our favorite engineering principles to the practical reality, a world that is full of uncertainty. </p><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><h3 id="Mathematical-Background"><a href="#Mathematical-Background" class="headerlink" title="Mathematical Background"></a>Mathematical Background</h3><p>“Data science” has different meanings to different people. If you ask a biologist, data science could mean analyzing DNA sequences. If you ask a banker, data science could mean predicting the stock market. If you ask a software engineer, data science could mean programs and data structures; if you ask a machine learning scientist, data science could mean programs and algorithms. However, one thing that is common in all these disciplines is the concept of uncertainty. We choose to learn from data because we believe that the latent information is embedded in the data – unprocessed, contains noise, and could have missing entries. If there is no randomness, all data scientists can close their business because there is simply no problem to solve. However, the moment we see randomness, our business comes back. Therefore, data science is the subject of making decisions in uncertainty.</p><blockquote><p>“数据科学”对不同的人有着不同的含义。如果你问一位生物学家，数据科学可能意味着分析DNA序列；如果你问一位银行家，数据科学可能意味着预测股票市场；如果你问一位软件工程师，数据科学可能意味着程序与数据结构；而如果你问一位机器学习科学家，数据科学可能意味着程序与算法。然而，所有这些领域有一个共同点，那就是不确定性的概念。我们之所以选择从数据中学习，是因为我们相信潜在的信息就隐藏在数据之中——这些数据未经处理、包含噪声，还可能存在缺失值。如果没有随机性（不确定性），所有数据科学家都可以关门歇业了，因为根本不存在需要解决的问题。但一旦我们观察到随机性，我们的“生意”就又回来了。因此，数据科学本质上是一门在不确定性中做出决策的学科。</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CEL-200 COMTECH</title>
       <link href="/2025/12/16/CEL-200-COMTECH/"/>
       <url>/2025/12/16/CEL-200-COMTECH/</url>
