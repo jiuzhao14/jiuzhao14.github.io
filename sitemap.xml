@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jiuzhao14.github.io/2025/12/08/C/</loc>
+    
+    <lastmod>2026-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jiuzhao14.github.io/2026/01/12/CCA/</loc>
+    
+    <lastmod>2026-01-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://jiuzhao14.github.io/2025/12/16/CEL-200-COMTECH/</loc>
     
     <lastmod>2026-01-06</lastmod>
@@ -14,15 +32,6 @@
     <loc>http://jiuzhao14.github.io/2025/12/29/Introduction-to-Probability-for-Data-Science/</loc>
     
     <lastmod>2025-12-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://jiuzhao14.github.io/2025/12/08/C/</loc>
-    
-    <lastmod>2025-12-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +94,7 @@
 
   <url>
     <loc>http://jiuzhao14.github.io/</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,14 +102,14 @@
   
   <url>
     <loc>http://jiuzhao14.github.io/tags/CEL200/</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://jiuzhao14.github.io/tags/eBPF/</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

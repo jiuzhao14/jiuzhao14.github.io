@@ -1,6 +1,7 @@
+http://jiuzhao14.github.io/2025/12/08/C/
+http://jiuzhao14.github.io/2026/01/12/CCA/
 http://jiuzhao14.github.io/2025/12/16/CEL-200-COMTECH/
 http://jiuzhao14.github.io/2025/12/29/Introduction-to-Probability-for-Data-Science/
-http://jiuzhao14.github.io/2025/12/08/C/
 http://jiuzhao14.github.io/movies/index.html
 http://jiuzhao14.github.io/2025/11/02/The-eBPF-Runtime-in-the-Linux-Kernel/
 http://jiuzhao14.github.io/tags/index.html
