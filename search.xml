@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>macos tips</title>
+      <link href="/2026/01/26/macos-tips/"/>
+      <url>/2026/01/26/macos-tips/</url>
+      
+        <content type="html"><![CDATA[<h2 id="minicom"><a href="#minicom" class="headerlink" title="minicom"></a>minicom</h2><p>查看串口设备（/dev下的设备节点）<br>macOS会将串口设备映射到<code>/dev</code>目录下，通常以以下形式出现：<br>FTDI 芯片：<code>/dev/tty.usbserial-*</code><br>CP210x 芯片：<code>/dev/tty.SLAB_USBtoUART</code><br>CH340 芯片：<code>/dev/tty.wchusbserial*</code> 或 <code>/dev/tty.usbserial-*</code><br>Arduino：<code>/dev/tty.usbmodem*</code></p><p><strong>列出当前串口设备</strong></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> /dev/tty.*</span><br></pre></td></tr></tbody></table></figure><p><strong>连接串口</strong></p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minicom -D /dev/tty.usbserial-1234 -b 115200</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CCA</title>
       <link href="/2026/01/12/CCA/"/>
       <url>/2026/01/12/CCA/</url>
