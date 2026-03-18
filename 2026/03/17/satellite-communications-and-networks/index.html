@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>satellite communications and networks | wesley's Blog</title><meta name="author" content="wesley tian"><meta name="copyright" content="wesley tian"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Air Interface: The Physical Layer and Antennas卫星连接的最底层是发射机与接收机之间的链路。在本章中，我们将探讨卫星系统所采用的数字通信信号、所需的差错控制策略以及用于通信的天线；此外，我们还将深入研究链路预算设计，其中包括理解发射机与接收机之间的信道特性，以及该信道对信号造成的劣化影响。 我们将探讨现代通信卫星中所采用的几种精选空中接口。其中包括宽带卫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="satellite communications and networks">
+<meta property="og:url" content="http://jiuzhao14.github.io/2026/03/17/satellite-communications-and-networks/index.html">
+<meta property="og:site_name" content="wesley&#39;s Blog">
+<meta property="og:description" content="Air Interface: The Physical Layer and Antennas卫星连接的最底层是发射机与接收机之间的链路。在本章中，我们将探讨卫星系统所采用的数字通信信号、所需的差错控制策略以及用于通信的天线；此外，我们还将深入研究链路预算设计，其中包括理解发射机与接收机之间的信道特性，以及该信道对信号造成的劣化影响。 我们将探讨现代通信卫星中所采用的几种精选空中接口。其中包括宽带卫">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://jiuzhao14.github.io/img/avatar.png">
+<meta property="article:published_time" content="2026-03-17T07:40:28.000Z">
+<meta property="article:modified_time" content="2026-03-18T02:51:13.318Z">
+<meta property="article:author" content="wesley tian">
+<meta property="article:tag" content="satellite communications">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jiuzhao14.github.io/img/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "satellite communications and networks",
+  "url": "http://jiuzhao14.github.io/2026/03/17/satellite-communications-and-networks/",
+  "image": "http://jiuzhao14.github.io/img/avatar.png",
+  "datePublished": "2026-03-17T07:40:28.000Z",
+  "dateModified": "2026-03-18T02:51:13.318Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "wesley tian",
+      "url": "http://jiuzhao14.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://jiuzhao14.github.io/2026/03/17/satellite-communications-and-networks/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'satellite communications and networks',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/purple-green.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="wesley's Blog" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">wesley's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">satellite communications and networks</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">satellite communications and networks</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-17T07:40:28.000Z" title="发表于 2026-03-17 15:40:28">2026-03-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-18T02:51:13.318Z" title="更新于 2026-03-18 10:51:13">2026-03-18</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="Air-Interface-The-Physical-Layer-and-Antennas"><a href="#Air-Interface-The-Physical-Layer-and-Antennas" class="headerlink" title="Air Interface: The Physical Layer and Antennas"></a>Air Interface: The Physical Layer and Antennas</h1><p>卫星连接的最底层是发射机与接收机之间的链路。在本章中，我们将探讨卫星系统所采用的数字通信信号、所需的差错控制策略以及用于通信的天线；此外，我们还将深入研究链路预算设计，其中包括理解发射机与接收机之间的信道特性，以及该信道对信号造成的劣化影响。</p>
+<p>我们将探讨现代通信卫星中所采用的几种精选空中接口。其中包括宽带卫星系统的主力军——数字视频广播卫星（DVB-S）系列及其第二代扩展标准 DVB-S2X；一种被部分小型卫星用于物联网（IoT）通信的空中接口——LoRa；以及第五代移动通信网络（5G）的非地面网络（NTN）接口——该接口通过实现智能手机与卫星之间的直接连接，有望彻底变革消费者在日常生活中使用卫星系统的方式。在本章中，您将学到：</p>
+<ul>
+<li>数字通信信号是如何形成与调制的，以及卫星系统中采用了哪些调制方法。</li>
+<li>卫星通信系统中采用了哪些类型的差错控制策略？这些策略涵盖了自动重传请求（ARQ）、前向纠错（FEC）方法及其组合。</li>
+<li>天线技术基础，涵盖相控阵天线与多波束卫星。</li>
+<li>如何针对 GEO 和 LEO 系统计算链路预算，以确保终端用户及其应用获得理想的性能。</li>
+<li>LEO 系统中的多普勒频移效应，以及如何在卫星端或终端端对其进行补偿。</li>
+<li>简要介绍所讨论的技术如何在当前现行的标准中得到应用，以及（例如在 5G 系统中）还采用了哪些额外的特性。</li>
+</ul>
+<h2 id="Digital-Communication-Signals"><a href="#Digital-Communication-Signals" class="headerlink" title="Digital Communication Signals"></a>Digital Communication Signals</h2><p>在我们日常生活中，所有的通信都是以信号的形式进行的。这些信号（例如人类语音）本质上属于模拟信号。尽管模拟信号长期以来一直被用于远距离通信，但它们容易受到失真影响，安全性较弱，且无法用于传输消费及工业应用领域所需的全部数字数据。数字通信是指通过点对点或点对多点信道，以数字比特流的形式进行数据的传输与接收。数字信号是原始数据或模拟信号经过数字化编码后的版本。这种方式克服了模拟传输所固有的上述弊端，从而实现了信号的清晰传输，使其不易受到噪声、干扰及失真的影响。数字化过程将连续的正弦波模拟信号转化为由“0”和“1”组成的离散信号。</p>
+<p>数字通信系统的基本组成单元包括换能器和模数转换器（A/D转换器），用于将模拟信号转换为数字信号。根据奈奎斯特-香农（Nyquist-Shannon）定理，对于带宽为B的模拟信号，其采样率至少应达到每秒2B个样本，方能完整捕获该信号所承载的所有信息。若要研习数字信号理论与通信原理，Sklar (2001) 和 Proakis (2007) 是极佳的参考资料。图4.1展示了数字通信系统的一个简化框图。信源编码器将输入波形压缩为比特流，旨在高效利用有限的信道带宽。信道编码器则在经信源编码后的数据中加入冗余比特，以便接收端能够进行纠错处理。最后，待发送的信号先由载波进行调制，并通过数模转换器（D/A转换器）转换为模拟形式，随后经由天线发送至信道。</p>
+<p><img src="/2026/03/17/satellite-communications-and-networks/fig4.1.png" alt="image.png"></p>
+<p>信号经由无线信道传输至接收端，在此处，信号被解调并重新转换为数字格式。信道解码器负责执行必要的纠错操作，并去除冗余比特，从而恢复原始信号。最后，信源解码器将这些比特转换为信号波形；该波形最终抵达目的地，并可在需要时被还原为模拟语音信号。上述编码器和解码器模块所处理的信号被称为基带信号，它们占据了电信网络中最低的频段。接下来，我们将探讨基带信号的基础知识，介绍卫星网络中典型的调制与编码方法；此外，我们还将深入研究旨在提升系统容量与可靠性的各类技术，其中包括自适应调制与编码（ACM）以及混合自动重传请求（HARQ）。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://jiuzhao14.github.io">wesley tian</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://jiuzhao14.github.io/2026/03/17/satellite-communications-and-networks/">http://jiuzhao14.github.io/2026/03/17/satellite-communications-and-networks/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://jiuzhao14.github.io" target="_blank">wesley's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/satellite-communications/">satellite communications</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/03/09/Introduction-to-Network-Concepts/" title="Introduction to Network Concepts"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Introduction to Network Concepts</div></div><div class="info-2"><div class="info-item-1">这是一个关于 IEEE 802.1Q Priority (PCP) 的技术文档草案。  技术文档：IEEE 802.1Q Priority (PCP/CoS) 详解文档版本: 1.0日期: 2026-03-09 1. 概述 (Overview)IEEE 802.1Q Priority，通常被称为 CoS (Class of Service) 或历史上的 802.1p，是一种在以太网（Layer 2）层面上实现服务质量（QoS）的机制。 它利用 802.1Q VLAN 标签头中的特定字段，允许网络设备（交换机、网卡）对数据帧进行分类和优先级排序。这确保了在网络拥塞时，关键业务流量（如语音、视频、网络控制信令）能获得优先转发。 2. 协议背景与标准 (Background) 标准归属: 最初由 IEEE 802.1p 定义，后被整合进 IEEE 802.1Q 标准（VLAN Tagging）。 工作层级: OSI 模型第 2 层（数据链路层）。 核心概念: PCP (Priority Code Point)。这是 802.1Q 标签中用于表示优先级的 3 位字段。  3. 帧结构分析...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wesley tian</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/jiuzhao14"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Air-Interface-The-Physical-Layer-and-Antennas"><span class="toc-number">1.</span> <span class="toc-text">Air Interface: The Physical Layer and Antennas</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Digital-Communication-Signals"><span class="toc-number">1.1.</span> <span class="toc-text">Digital Communication Signals</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/17/satellite-communications-and-networks/" title="satellite communications and networks">satellite communications and networks</a><time datetime="2026-03-17T07:40:28.000Z" title="发表于 2026-03-17 15:40:28">2026-03-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/09/Introduction-to-Network-Concepts/" title="Introduction to Network Concepts">Introduction to Network Concepts</a><time datetime="2026-03-09T07:59:15.000Z" title="发表于 2026-03-09 15:59:15">2026-03-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/26/macos-tips/" title="macos tips">macos tips</a><time datetime="2026-01-26T02:27:07.000Z" title="发表于 2026-01-26 10:27:07">2026-01-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/12/CCA/" title="CCA">CCA</a><time datetime="2026-01-12T13:12:49.000Z" title="发表于 2026-01-12 21:12:49">2026-01-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/29/Introduction-to-Probability-for-Data-Science/" title="Introduction to Probability for Data Science">Introduction to Probability for Data Science</a><time datetime="2025-12-29T01:14:12.000Z" title="发表于 2025-12-29 09:14:12">2025-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wesley tian</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div></div></body></html>

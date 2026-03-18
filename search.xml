@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>satellite communications and networks</title>
+      <link href="/2026/03/17/satellite-communications-and-networks/"/>
+      <url>/2026/03/17/satellite-communications-and-networks/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Air-Interface-The-Physical-Layer-and-Antennas"><a href="#Air-Interface-The-Physical-Layer-and-Antennas" class="headerlink" title="Air Interface: The Physical Layer and Antennas"></a>Air Interface: The Physical Layer and Antennas</h1><p>卫星连接的最底层是发射机与接收机之间的链路。在本章中，我们将探讨卫星系统所采用的数字通信信号、所需的差错控制策略以及用于通信的天线；此外，我们还将深入研究链路预算设计，其中包括理解发射机与接收机之间的信道特性，以及该信道对信号造成的劣化影响。</p><p>我们将探讨现代通信卫星中所采用的几种精选空中接口。其中包括宽带卫星系统的主力军——数字视频广播卫星（DVB-S）系列及其第二代扩展标准 DVB-S2X；一种被部分小型卫星用于物联网（IoT）通信的空中接口——LoRa；以及第五代移动通信网络（5G）的非地面网络（NTN）接口——该接口通过实现智能手机与卫星之间的直接连接，有望彻底变革消费者在日常生活中使用卫星系统的方式。在本章中，您将学到：</p><ul><li>数字通信信号是如何形成与调制的，以及卫星系统中采用了哪些调制方法。</li><li>卫星通信系统中采用了哪些类型的差错控制策略？这些策略涵盖了自动重传请求（ARQ）、前向纠错（FEC）方法及其组合。</li><li>天线技术基础，涵盖相控阵天线与多波束卫星。</li><li>如何针对 GEO 和 LEO 系统计算链路预算，以确保终端用户及其应用获得理想的性能。</li><li>LEO 系统中的多普勒频移效应，以及如何在卫星端或终端端对其进行补偿。</li><li>简要介绍所讨论的技术如何在当前现行的标准中得到应用，以及（例如在 5G 系统中）还采用了哪些额外的特性。</li></ul><h2 id="Digital-Communication-Signals"><a href="#Digital-Communication-Signals" class="headerlink" title="Digital Communication Signals"></a>Digital Communication Signals</h2><p>在我们日常生活中，所有的通信都是以信号的形式进行的。这些信号（例如人类语音）本质上属于模拟信号。尽管模拟信号长期以来一直被用于远距离通信，但它们容易受到失真影响，安全性较弱，且无法用于传输消费及工业应用领域所需的全部数字数据。数字通信是指通过点对点或点对多点信道，以数字比特流的形式进行数据的传输与接收。数字信号是原始数据或模拟信号经过数字化编码后的版本。这种方式克服了模拟传输所固有的上述弊端，从而实现了信号的清晰传输，使其不易受到噪声、干扰及失真的影响。数字化过程将连续的正弦波模拟信号转化为由“0”和“1”组成的离散信号。</p><p>数字通信系统的基本组成单元包括换能器和模数转换器（A/D转换器），用于将模拟信号转换为数字信号。根据奈奎斯特-香农（Nyquist-Shannon）定理，对于带宽为B的模拟信号，其采样率至少应达到每秒2B个样本，方能完整捕获该信号所承载的所有信息。若要研习数字信号理论与通信原理，Sklar (2001) 和 Proakis (2007) 是极佳的参考资料。图4.1展示了数字通信系统的一个简化框图。信源编码器将输入波形压缩为比特流，旨在高效利用有限的信道带宽。信道编码器则在经信源编码后的数据中加入冗余比特，以便接收端能够进行纠错处理。最后，待发送的信号先由载波进行调制，并通过数模转换器（D/A转换器）转换为模拟形式，随后经由天线发送至信道。</p><p><img src="/2026/03/17/satellite-communications-and-networks/fig4.1.png" alt="image.png"></p><p>信号经由无线信道传输至接收端，在此处，信号被解调并重新转换为数字格式。信道解码器负责执行必要的纠错操作，并去除冗余比特，从而恢复原始信号。最后，信源解码器将这些比特转换为信号波形；该波形最终抵达目的地，并可在需要时被还原为模拟语音信号。上述编码器和解码器模块所处理的信号被称为基带信号，它们占据了电信网络中最低的频段。接下来，我们将探讨基带信号的基础知识，介绍卫星网络中典型的调制与编码方法；此外，我们还将深入研究旨在提升系统容量与可靠性的各类技术，其中包括自适应调制与编码（ACM）以及混合自动重传请求（HARQ）。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> satellite communications </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Introduction to Network Concepts</title>
       <link href="/2026/03/09/Introduction-to-Network-Concepts/"/>
       <url>/2026/03/09/Introduction-to-Network-Concepts/</url>
