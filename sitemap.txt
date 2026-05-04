@@ -1,3 +1,4 @@
+http://jiuzhao14.github.io/2026/05/04/network-algorithms/
 http://jiuzhao14.github.io/2026/01/12/CCA/
 http://jiuzhao14.github.io/2026/01/26/macos-tips/
 http://jiuzhao14.github.io/2026/03/09/Introduction-to-Network-Concepts/
@@ -12,7 +13,7 @@ http://jiuzhao14.github.io/categories/index.html
 http://jiuzhao14.github.io/archives/index.html
 http://jiuzhao14.github.io/about/index.html
 http://jiuzhao14.github.io/
-http://jiuzhao14.github.io/tags/CEL200/
 http://jiuzhao14.github.io/tags/network-ethernet/
 http://jiuzhao14.github.io/tags/eBPF/
 http://jiuzhao14.github.io/tags/satellite-communications/
+http://jiuzhao14.github.io/tags/CEL200/
